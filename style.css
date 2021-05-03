@@ -1,0 +1,294 @@
+.container {
+    background-color: #fcfcfc;
+}
+
+.img_container {
+    width: 100vw;
+    height: 40vh;
+    background-color: black;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+#image {
+    height: 40vh;
+    
+}
+
+.header_container {
+    display: flex;
+}
+
+.img_container h1 {
+    font-family: 'Open Sans', sans-serif;
+    padding-right: 10px;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 40%;
+    margin-left: 30px;
+}
+
+.img_container h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 32%;
+    margin-left: 30px;
+}
+
+.img_container input {
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    border-radius: 15px;
+    border-width: 0px;
+    width: 400px;
+    padding-left: 15px;
+    margin-bottom: -30px;
+    box-shadow: 0 4px 2px -2px #f0f0f0;
+}
+
+#nominations_container {
+    position: absolute;
+    right: 0;
+    top: 16%;
+    margin-right: 60px;
+    height: 77%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#nominations_container h4 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    color: #fff;
+    margin-top: -20px;
+    position: absolute;
+    top: 0;
+}
+
+#nominations_banner {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 300px;
+    background-color: rgb(248, 240, 214);
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    -webkit-box-shadow: 0 0 10px #fff;
+    box-shadow: 0 0 10px #fff;
+}
+
+#tick_container {
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tick_img {
+    height: 50px;
+}
+
+#close_banner {
+    width: 75px;
+    height: 45px;
+    border: 1px solid black;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#close_banner:hover {
+    background-color: gray;
+}
+
+#close_banner:hover p{
+    color: white;
+}
+
+#close_banner p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+}
+
+#nominations_banner h2 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    color: rgb(29, 16, 16);
+}
+
+.nomination {
+    width: 90%;
+    height: 14%;
+    background-color: rgb(243, 242, 242);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    margin-top: 7px;
+    position: relative;
+}
+
+.nomination_text {
+    font-size: 10px;
+    font-weight: 500;
+    color: rgb(63, 62, 62);
+    font-family: 'Nunito', sans-serif;
+    padding-right: 3px;
+}
+
+.nomination_text_year {
+    font-size: 7px;
+    font-weight: 300;
+    color: rgb(66, 65, 65);
+    font-family: 'Nunito', sans-serif;
+}
+
+.remove_button {
+    display: none;
+}
+
+.remove_button:hover {
+    color: red
+}
+
+.nomination:hover .remove_button {
+    display: block;
+    position: absolute;
+    right: 3%;
+    height: 75%;
+}
+
+.results_container {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie_image {
+    width: 100px;
+    border-radius: 3px;
+    transition: transform .6s;
+}
+
+.movie_image:hover {
+    transform: scale(1.2);
+}
+
+.movie_image_container {
+    margin: 10px;
+    height: 180px;
+    width: 120px;
+    position: relative;
+    vertical-align: top;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.movie_title {
+    bottom: 0;
+    position: absolute;
+    vertical-align: top;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+}
+
+.movie_year {
+    font-size: 10px;
+    position: absolute;
+    left: 40%;
+    bottom: 0;
+    margin-bottom: -1px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.check_box {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.check_mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background: url('heartEmpty.png');
+    background-size: contain;
+}
+
+.check_mark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+.check_box:checked ~ .check_mark:after {
+    display: block;
+}
+
+.check_mark:after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('heart.png');
+    background-size: contain;
+}
+
+
+.nominate_button {
+    width: 40px;
+    height: 40px;
+    pointer-events: none;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 50%;
+    display: none;
+    color: rgb(248, 248, 248);
+}
+
+.movie_image:hover + .nominate_button, .nominate_button:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nominate_button:hover ~ .movie_image, .movie_image:hover {
+    transform: scale(1.2);
+}
+
+#too_many_error {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#not_found_error {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}

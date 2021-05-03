@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>The Shoppies</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Open+Sans:wght@300&family=Raleway&display=swap" rel="stylesheet">
+    <script type="module" src="fetch.js"></script>
+  </head>
+
+  <body class="container">
+
+    <div class="img_container">
+      <h1>The Shoppies</h1>
+      <img id="image" src="godfather.jpg"/>
+      <h3>where nominations happen!</h3>
+      <div id="nominations_container">
+        <h4>Your nominations</h4>
+      </div>
+      <input id="search_bar" type="text" placeholder="Search movies...">
+    </div>
+
+    <div class="results_container" id="results_container">
+      <div id="too_many_error">
+        <h2>Too many results</h2>
+      </div>
+      <div id="not_found_error">
+        <h2>Not found!</h2>
+      </div>
+    </div>
+
+    <!--Banner to display when user selected 5 nominees -->
+    <div id="nominations_banner">
+      <div id="tick_container">
+        <img id="tick_img" src="tick.png"/>
+      </div>
+      <h2>You've now used all your 5 nomination slots!</h2>
+      <div id="close_banner">
+        <p>Close</p> 
+      </div>
+    </div>
+
+    
+  </body>
+</html>
