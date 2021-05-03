@@ -1,5 +1,7 @@
 # Movie Awards
 
+[Project Site](http://youda.xyz/Movie-Awards/)
+
 Features:
 * Automatically shows random movie results on page load
 * Can nominate movies by hovering over them and clicking on them
